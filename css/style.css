@@ -1,0 +1,680 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+/**************** Basic Setup ***************/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style-type: none;
+    scroll-behavior: smooth;
+}
+
+:root {
+    --main-color: #033a80;
+    --bg-color: #fff;
+    --text-color: #0f0c27;
+    --hover-color: #5805ff;
+    --big-font: 3rem;
+    --medium-font: 2.5rem;
+}
+
+::selection {
+    background: var(--text-color);
+    color: #02a646;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+    background: var(--bg-color);
+    color: var(--text-color);
+}
+
+/**************** Reusable Components ***************/
+
+section {
+    padding: 8rem 10% 3rem;
+    max-width: 1300px;
+    margin: 0 auto;
+}
+
+.btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 500;
+    font-size: 1rem;
+    background: var(--hover-color);
+    color: white;
+    border-radius: 5px;
+    margin-top: 10px;
+    width: 140px;
+    height: 45px;
+
+}
+
+.heading {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.heading h2 {
+    font-size: var(--medium-font);
+    color: var(--text-color);
+    font-weight: 700;
+}
+
+.heading p {
+    color: #02a646;
+    font-size: 15px;
+    font-weight: 500;
+}
+
+
+/**************** Header Section ***************/
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.8rem 10%;
+    max-width: 1300px;
+    margin: auto;
+    background: white;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    box-shadow: 0 1px 5px rgba(0,0,0,0.8);
+    z-index: 1000;
+}
+
+.logo {
+    font-size: 30px;
+    color: var(--text-color);
+    font-weight: 700;
+    
+}
+
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1.5rem;
+
+}
+
+.navlist {
+    display: flex;
+}
+
+.navlist a {
+    margin-left: 2rem;
+    font-size: 15px;
+    font-weight: 500;
+    color: var(--text-color);
+    transition: all 0.3s ease-out;
+}
+
+.navlist .active {
+    color: var(--hover-color);
+    transform: scale(1.05);
+}
+
+.navlist a:hover {
+    color: var(--hover-color);
+    transform: scale(1.05);
+}
+
+.navbar a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease-in-out;
+    
+}
+
+.navbar a:hover i {
+    color: var(--hover-color);
+}
+
+
+.navbar a i {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    color: var(--text-color);
+    transition: all 0.3s ease-in-out;
+}
+
+
+/**************** Home Section ***************/
+
+.home {
+   
+}
+
+.home-content-image {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    gap: 2rem;
+}
+
+.home-content h3 {
+    font-size: 2rem;
+    color: var(--text-color);
+    font-weight: 500;
+
+}
+
+.home-content h1 {
+    font-size: var(--medium-font);
+    font-weight: 700;
+    color: var(--text-color);
+}
+
+.home-content span {
+    font-size: 1.3rem;
+    color: var(--hover-color);
+    font-weight: 500;
+
+}
+
+.home-content p {
+    font-size: 14px;
+    color: var(--text-color);
+    font-weight: 400;
+    width: 70%;
+    margin: 5px 0;
+}
+
+
+
+.home-image img {
+    width: 100%;
+}
+
+.home .social-icon {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+    gap: 1rem;
+}
+
+.social-icon a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: var(--hover-color);
+    color: #fff;
+    transition: all 0.5s ease-in-out;
+
+}
+
+.social-icon a:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 20px var(--hover-color);
+    background: var(--text-color);
+}
+
+.social-icon a:hover i {
+    transform: rotate(360deg);
+}
+
+.social-icon a i {
+    font-size: 25px;
+    transition: all 0.5s ease-in-out;
+}
+
+
+/**************** About Section ***************/
+
+.about-me {
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 2rem;
+}
+
+.about-image img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.about-content p {
+    font-size: 15px;
+    line-height: 1.5;
+    color: var(--text-color);
+    text-align: justify;
+    margin-bottom: 15px;
+}
+
+.full-detail {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 15px;
+    cursor: pointer;
+    align-items: center;
+}
+
+.full-detail i {
+    color: var(--text-color);
+    font-size: 18px;
+    transition: all 0.3s ease-in-out;
+}
+
+.full-detail h5 {
+    font-size: 15px;
+    font-weight: 400;
+    color: var(--text-color);
+    transition: all 0.3s ease-in-out;
+}
+
+.full-detail:hover i ,
+.full-detail:hover h5 {
+    color: #02a646;
+}
+
+.about-content .btn {
+    margin-top: 25px;
+}
+
+
+/**************** Skills Section ***************/
+
+.my-skill {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    gap: 2rem;
+}
+
+.skill-box {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    margin-bottom: 15px;
+}
+
+.skill-name {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.skill-name h5 ,
+.skill-name span {
+    font-size: 15px;
+    font-weight: 500;
+    color: var(--text-color);
+}
+
+.progress-bar {
+    width: 100%;
+    height: 8px;
+    background: var(--text-color);
+    border-radius: 20px;
+    position: relative;
+    overflow: hidden;
+}
+
+.progress-bar::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--hover-color);
+    border-radius: 20px;
+}
+
+.html::before {
+    width: 94%;
+}
+
+.css::before {
+    width: 84%;
+}
+
+.javascript::before {
+    width: 70%;
+}   
+
+.react::before {
+    width: 80%;
+}
+
+
+
+.skill-image img {
+    width: 100%;
+}
+
+
+/**************** Services Section ***************/
+
+.my-services {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, auto));
+    
+}
+
+.service-box {
+    padding: 30px 15px;
+    border-radius: 10px;
+    border-bottom: 3px solid var(--hover-color);
+    box-shadow: 0 0 4px var(--text-color);
+    text-align: center;
+    cursor: pointer;
+    background: #fff;
+    transition: all 0.5s ease-in-out;
+}
+
+.service-box:hover {
+    background: var(--text-color);
+    transform: translateY(-10px);
+    border-color: #02a646;
+}
+
+.service-box:hover i,
+.service-box:hover a {
+    color: #02a646;
+    border-color: #02a646;
+}
+
+.service-box:hover h5 {
+    color: white;
+    transition: all 0.5s ease-in-out;
+}
+
+.service-box i {
+    font-size: 2.5rem;
+    transition: all 0.5s ease-in-out;
+}
+
+.service-box h5 {
+    margin-top: 10px;
+    font-size: 1rem;
+    color: var(--text-color);
+    font-weight: 600;
+}
+
+.service-box a {
+    margin-top: 20px;
+    font-size: 1rem;
+    color: var(--hover-color);
+    font-weight: 500;
+    display: inline-block;
+    background: transparent;
+    padding: 6px 15px;
+    border: 2px solid var(--hover-color);
+    border-radius: 30px;
+    transition: all 0.5s ease-in-out;
+}
+
+.service-box a:hover {
+    background: #02a646;
+    color: white;
+    border-color: white;
+}
+
+
+/**************** Portfolio Section ***************/
+
+.my-portfolio {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, auto));
+    gap: 2rem;
+}
+
+.portfolio-image {
+    overflow: hidden;
+}
+
+.portfolio-image img {
+    width: 100%;
+    transition: all 0.5s ease-in-out;
+    border-radius: 5px;
+}
+
+.portfolio-image img:hover {
+    transform: scale(1.05);
+}
+
+
+/**************** Contact Section ***************/
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    align-items: center;
+    justify-content: center;
+    width: 650px;
+    margin: auto;
+}
+
+form input ,
+form textarea {
+    width: 100%;
+    padding: 15px;
+    border-radius: 8px;
+    border: none;
+    outline: none;
+    background: rgba(75, 0, 224, 0.1);
+    color: var(--text-color);
+}
+
+form textarea {
+    resize: none;
+    height: 200px;
+}
+
+form .btn {
+    background: #2768d9;
+}
+
+
+/**************** Footer Section ***************/
+
+.footer {
+    padding: 1.5rem 10%;
+    background: var(--hover-color);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.footer .footer-left p {
+    color: white;
+    font-size: 1rem;
+}
+
+.footer-left p a {
+    color: #02a646;
+    font-weight: 600;
+    transition: all 0.5s ease-in-out;
+    display: inline-block;
+}
+
+.footer-left p a:hover {
+    text-decoration: underline;
+}
+
+.footer-right a {
+    position: absolute;
+    top: 50%;
+    right: 10%;
+    transform: translateY(-50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: #02a646;
+    transition: all 0.5s ease-in-out;
+}
+
+.footer-right a i {
+    color: var(--text-color);
+    transition: all 0.5s ease-in-out;
+}
+
+.footer-right a:hover {
+    background: var(--text-color);
+    
+}
+
+.footer-right a:hover i {
+    color: #02a646;
+}
+
+
+
+@media (max-width:1024px) {
+    section {
+        padding: 8rem 8% 3rem;
+    }
+}
+
+@media (max-width:920px) {
+    section {
+        padding: 8rem 5% 3rem;
+    }
+}
+
+@media (max-width:900px) {
+    .my-services {
+        grid-template-columns: repeat(2,1fr);
+        gap: 2rem;
+    }
+
+    .home-content h1 {
+        font-size: 2rem;
+    }
+
+    .home-content h3 {
+        font-size: 1.8rem;
+    }
+
+    .home-content span {
+        font-size: 1.2rem;
+        margin-bottom: 15px;
+    }
+
+}
+
+
+@media (max-width:850px) {
+    .about-content p {
+        font-size: 14px;
+    }
+
+    .full-detail {
+        margin-bottom: 10px;
+    }
+
+    .about-me {
+        align-items: center;
+    }
+}
+
+@media (max-width:768px) {
+    .social-icon a {
+        width: 40px;
+        height: 40px;
+    }
+}
+
+@media (max-width:750px) {
+    .navlist {
+        display: none;
+    }
+
+    .home-content-image {
+        grid-template-columns: 1fr;
+    }
+
+    .home-content {
+        text-align: center;
+        order: 2;
+
+    }
+
+    .home-content p {
+        margin: auto;
+    }
+
+    .home-content .btn {
+        margin: auto;
+        margin-top: 1rem;
+    }
+
+    .about-me {
+        grid-template-columns: 1fr;
+    }
+
+    .about-content {
+        text-align: center;
+    }
+
+    .full-detail {
+        
+    }
+
+    .about-content .btn {
+        margin: auto;
+    }
+
+    .my-skill {
+        grid-template-columns: 1fr;
+    }
+
+    .skill-content {
+        order: 2;
+    }
+
+    form {
+        width: 100%;
+    }
+}
+
+
+
+
+@media (max-width:600px) {
+    .footer-right {
+        display: none;
+    }
+}
+
+@media (max-width:550px) {
+    .my-services {
+        grid-template-columns: 1fr;
+    }
+
+    .service-box i {
+        font-size: 3.5rem;
+    }
+}
+
+
+
+
+
+
+
+
